@@ -1,12 +1,27 @@
-import React, { Component } from 'react'
+import React from "react";
+import NavBar from './Navbar';
+import { makeStyles } from "@material-ui/core";
+import theme from '../../config/themeConfig';
 
-export default class Navigation extends Component {
-    render() {
-        return (
-            <div>
-                Navigation
-            </div>
-        )
-    }
-}
+const style = makeStyles(theme => ({
+  root: {
+    display: "flex",
+  },
+  toolbar: theme.mixins.toolbar,
+}));
 
+const Navigation = () => {
+  const classes = style();
+
+  return (
+    <div className={classes.root}>
+        <NavBar/>
+        <div>
+            <div className={classes.toolbar}/>
+            contenido
+        </div>
+    </div>
+  );
+};
+
+export default Navigation;

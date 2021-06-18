@@ -1,16 +1,17 @@
-import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Animation from './components/Animation/Animation' ;
+import React from "react";
+import Navigation from "./components/navbar/Navigation";
+import Animation from "./components/Animation/Animation"
 
-import Navigation from './components/navbar/Navigation';
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from './config/themeConfig';
+
 
 function App() {
   return (
-    <Router>
+    <ThemeProvider theme={theme}>
       <Navigation/>
-      
-      <Route exact path="/" component={Animation} />
-    </Router>
+      <Animation/>
+    </ThemeProvider>
   );
 }
 
