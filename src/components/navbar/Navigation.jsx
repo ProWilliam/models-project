@@ -42,7 +42,7 @@ const Navigation = () => {
         <div className={classes.toolbar}/>
         contenedor
       </div>
-    </div>
+    </div>  
   );
 };
 
